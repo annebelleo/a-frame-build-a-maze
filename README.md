@@ -20,6 +20,6 @@ Fork and Clone this repository or feel free to start from scratch. In `index.htm
 
 + Medium Challenge: Add in special doors that will disappear when you click on them (Using the cursor and animation).
 
-+ Advanced: Can you write an algorithm in javascript that will automatically construct a maze? And can you then have that maze translated into a-frame using jQuery?
++ **Advanced:** Can you write an algorithm in javascript that will automatically construct a new maze every time it is run? And can you then have that maze translated into a-frame using jQuery so that each time you load your page you get a different maze challenge?
 
-+ Add your own quirks to your labyrinth! 
++ Add your own quirks to your labyrinth!
