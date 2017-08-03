@@ -5,10 +5,11 @@
   <meta charset="utf-8">
   <title>A-Frame Lab</title>
   <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+  <script src = "script.js"></script>
 </head>
 
-<body>
-  <a-scene>
+<body onload="appendImage()">
+  <a-scene id = "scene">
     <a-sky color="#000000"></a-sky>
     <a-assets>
       <img id="texture" src="">
@@ -96,10 +97,13 @@
     </a-entity>
 
     <a-box src="#texture"></a-box>
+    <a-box id="#frank"></a-box>
     <a-camera>
       <a-cursor></a-cursor>
     </a-camera>
+    
   </a-scene>
+  
 </body>
 
 </html>

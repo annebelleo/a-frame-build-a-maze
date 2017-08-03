@@ -1,14 +1,37 @@
-function appendSphere() {
-    // creating a new sphere
-    for (var i = 0; i < 50; i++) {
-        var size=Math.random()
-        var positionX = Math.floor(Math.random() * 5);
-        var positionY = Math.floor(Math.random() * 5);
-        var positionZ = Math.floor(Math.random() * -5);
-        var newSphere = document.createElement("a-sphere");
-        newSphere.setAttribute("color", "black");
-        newSphere.setAttribute("radius", `${size}`);
-        newSphere.setAttribute("position", `${positionX} ${positionY} ${positionZ}`);
-        document.getElementById("scene").appendChild(newSphere);
-    }
+function appendImage() {    // creating a new sphere
+        // var positionX = Math.floor(Math.random() * 6);
+        // var positionY = Math.floor(Math.random() * 6);
+        // var positionZ = Math.floor(Math.random() * -6);
+        var position = choosePoint();
+        var frankBall = document.createElement("a-sphere");
+        frankBall.setAttribute("src", "#frank");
+        frankBall.setAttribute("position", position);
+        // frankBall.setAttribute("display", "true");
+        frankBall.addEventListener("click", function(){
+            this.setAttribute("visible", false)
+            var winMessage = document.createElement("a-text");
+            winMessage.setAttribute("value", "YOU WIN!");
+            winMessage.setAttribute("position", this.getAttribute("position"));
+            document.getElementById("scene").appendChild(winMessage);
+        })
+        document.getElementById("scene").appendChild(frankBall);
+        
 }
+
+function choosePoint(){
+    var index = Math.floor(Math.random() * (points.length-1));
+    return points[index];
+}
+
+//create text that displays winning message
+//set text to be over frankBall's position in giant font
+// function win(position) {
+//     console.log("hey");
+    
+//     // element.setAttribute("display", "false");
+    
+// }
+
+//create timer that displays under winning message in format "time: [time]"
+
+var points = ["0 2 -7"];
