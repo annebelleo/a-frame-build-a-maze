@@ -19,7 +19,7 @@ function appendImage() {    // creating a new sphere
 }
 
 function choosePoint(){
-    var index = Math.floor(Math.random() * (points.length-1));
+    var index = Math.floor(Math.random() * (points.length));
     return points[index];
 }
 
@@ -34,4 +34,4 @@ function choosePoint(){
 
 //create timer that displays under winning message in format "time: [time]"
 
-var points = ["0 2 -7"];
+var points = ["0 2 -7", "0 2 7", "7 2 0", "-7 2 0"];
